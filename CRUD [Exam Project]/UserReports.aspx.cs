@@ -12,7 +12,7 @@ public partial class UserReports : System.Web.UI.Page
     {
         ReportDocument report = new ReportDocument();
         report.Load(Server.MapPath("rptUsers.rpt"));
-        report.DataSourceConnections[0].SetConnection(@"LEMONDEV\LEMONDEV", "CITRINESAIS", true);
+        report.DataSourceConnections[0].SetConnection(@"VOUS-PC\SQLDEV17", "dbCrud", "sa", "windows7");
         crvUsers.ReportSource = report;
         crvUsers.DataBind();
     }
